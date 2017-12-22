@@ -1,0 +1,157 @@
+* {
+    margin:0;
+    border:0;
+    padding:0;
+    font-size:12px;
+    text-decoration:none;
+    list-style:none;
+    color:black;
+    font-family:Tahoma,'黑体', Verdana, Arial,Helvetica, sans-serif;
+    user-select:none; -webkit-user-select:none; -moz-user-select:none;
+    font-weight:normal ;
+}
+html,body {
+    width: 100%;
+    height: 100%;
+}
+@mixin tong($w:100px,$h:100px){
+    width: $w;
+    height: $h;
+}
+header{
+    @include tong(calc(100% - 20px),35px);
+    border-bottom: 1px solid #DDDDDD;
+    position: fixed;
+    top: 0; left: 0;
+    padding: 10px;
+    z-index: 100;
+    background: #FFF;
+    img{ 
+        @include tong(150px,35px);
+        float: left;
+    }
+    p{
+        line-height:35px;
+        &:nth-of-type(1){
+            float: left;
+            font-size: 16px;
+            margin-left: 20px;
+        }
+        &:nth-of-type(2){
+            float: right;
+            font-size: 30px;
+        }
+    }
+}
+
+.banner{
+    margin-top:55px ;
+}
+.swiper-container{
+   @include tong(100%,350px);
+   .swiper-slide{
+       @include tong(100%,350px);
+       text-align: center;
+       img{
+           @include tong(800px,350px);
+       }
+   }
+}
+.s1{
+    width:100%;
+    overflow: hidden;
+    background: #FFF;
+    .s_h{
+        padding: 0 20px;
+        line-height: 50px;
+        h1{
+            float: left;
+            font-size: 20px;
+        }
+        p{
+            float: right;
+            font-size: 20px;
+        }
+    }
+}
+.s1_swiper-container{
+    @include tong(380px,340px);
+    .swiper-slide{
+       @include tong(180px,340px);
+       text-align: center;
+       img{
+           @include tong(180px,240px);
+       }
+       p{
+           line-height: 60px;
+       }
+    }
+}
+
+
+.s2{
+    border-top: 20px solid #F2F2F2;
+    margin-top: 20px;
+    background: #FFF;
+    @include tong(calc(100% - 40px));
+    padding: 0 20px;
+    h1{
+        line-height: 50px;
+        font-size: 20px;
+    }
+    figure{
+        @include tong(980px,250px);
+        margin: 10px 0;
+        img{
+            @include tong(400px,250px);
+            float: left;
+        }
+        figcaption{
+            float: left;
+            width: 400px;
+            padding:0 20px;
+            h2{
+                line-height:50px;
+                font-size:18px;
+            }
+            p{
+                margin-top: 170px;
+                span{
+                    display: inline-block;
+                    width: 30px;
+                    border: 1px solid blue;
+                    height: 15px;
+                    color: blue;
+                    text-align: center;
+                    line-height: 15px;
+                    transform: scale(0.8);
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+}
+footer{
+    width: 100%;
+    height: 50px;
+    background: #FFFFFF;
+    z-index: 101;
+    position: fixed;
+    bottom: 0; left: 0;
+    .foot{
+        width: 20%;
+        float: left;
+        p{
+            color: #998278;
+            text-align: center;
+            &:nth-of-type(1){
+                @include tong(20px,20px);
+                margin: 5px auto;
+            }
+        }
+        .iconfont{
+            font-size: 20px;
+            color: #998278;
+        }
+    }
+}
